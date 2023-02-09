@@ -13,7 +13,7 @@
     "passport",
     "server"
   ],
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.prod.json",
     "clean": "rimraf dist",
