@@ -50,7 +50,7 @@ export default function(app: Express, impl: t.{{className name}}Api) {
 				}
 
 				{{/if}}
-				impl.{{identifier name}}({{!--
+				impl.{{identifier name}}(req, {{!--
 				--}}{{#each parameters}}{{>params/query}}{{>params/path}}{{>params/header}}{{>params/form}}{{>params/cookie}}{{#hasMore}}, {{/hasMore}}{{/each}}{{!--
 				--}}{{#if requestBody.nativeType}}{{#if parameters}}, {{/if}}{{>params/body}}{{/if}}{{!--
 				--}}{{#if securityRequirements}}{{#or parameters requestBody}}, {{/or}}__user{{/if}}{{!--
