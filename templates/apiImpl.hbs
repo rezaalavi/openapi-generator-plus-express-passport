@@ -1,5 +1,6 @@
 
 import * as t from "../gen/api{{path}}/types";
+import { Api } from "../models";
 {{#each operations}}
 async function {{identifier name}}(req: Express.Request, {{#each parameters}}{{identifier name}}:
 {{{nativeType}}}{{#unless required}} | undefined{{/unless}}{{#hasMore}}, {{/hasMore}}{{/each}}{{!--
