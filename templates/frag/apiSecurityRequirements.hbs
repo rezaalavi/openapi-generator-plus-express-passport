@@ -3,4 +3,6 @@
 passport.authenticate({{#if scheme.scheme}}{{{stringLiteral scheme.scheme}}}{{else}}{{{stringLiteral scheme.name}}}{{/if}}, {{safe '{'}}{{#ifvex 'x-session' scheme}} session: {{scheme.vendorExtensions.x-session}}, {{/ifvex}}{{safe '}'}}),
 {{/each}}
 {{/each}}
+{{#if securityRequirements.requirements}}
 acl.authorize,
+{{/if}}
